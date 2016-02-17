@@ -6,11 +6,10 @@ markdown: redcarpet
 author: 
   name: ivyxjc
   email: ivyxjc1994@hotmail.com
-  link: 
-  weibo:
-  github: 
-  music: 
-  linkedin: 
+  link: xuejc.tk
+  github: https://github.com/ivyxjc
+
+
 
 # 站点信息
 title: Ivyxjc
@@ -19,8 +18,8 @@ url:
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: /public/img/identicon.png
-favicon: /public/img/identicon.png
+gavatar: /assets/img/identicon.png
+favicon: /assets/img/identicon.png
 
 # google analytics 设置
 ga:
@@ -36,8 +35,6 @@ active: 读书
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
-  - LaTeX
 
 # 中文本地化
 locals:
