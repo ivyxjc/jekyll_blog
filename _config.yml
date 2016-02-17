@@ -1,0 +1,47 @@
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+markdown: redcarpet
+
+# 作者信息
+author: 
+  name: ivyxjc
+  email: ivyxjc1994@hotmail.com
+  link: 
+  weibo:
+  github: 
+  music: 
+  linkedin: 
+
+# 站点信息
+title: Ivyxjc
+description: My personal blog
+url: 
+rss_url: /pages/atom.xml
+
+# gavatar头像及Favicon
+gavatar: 
+favicon: 
+
+# google analytics 设置
+ga:
+  id: UA-73862242-1
+  url: www.xuejc.tk
+
+# disqus 设置
+disqus:
+  shortname: ivyxjc
+
+# 主题设置，自动激活某个标签
+active: 读书
+
+# 首页除了最新文章外显示分类
+cates: 
+  - Optimization
+  - LaTeX
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
+  archive: 归档
