@@ -2,7 +2,7 @@
 layout: post
 title: hello world
 category:随笔
-tags: []
+tags: [test]
 keywords:
 description: "测试"
 ---
