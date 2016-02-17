@@ -2,7 +2,7 @@
 layout: post
 title: 『笔记』Thinking in Java - 内部类
 category: Java
-tags: []
+tags: [java , class]
 ---
  
 ## 创建内部类、链接到外部类、使用.this和.new
