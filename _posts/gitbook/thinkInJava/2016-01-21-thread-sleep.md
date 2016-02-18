@@ -1,7 +1,7 @@
 ---
 layout: post
 title: thread_sleep
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

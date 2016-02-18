@@ -1,7 +1,7 @@
 ---
 layout: post
 title: arraysaslist
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

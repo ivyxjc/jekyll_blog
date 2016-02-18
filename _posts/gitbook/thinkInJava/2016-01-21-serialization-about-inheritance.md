@@ -1,7 +1,7 @@
 ---
 layout: post
 title: serialization_about_inheritance
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

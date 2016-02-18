@@ -1,7 +1,7 @@
 ---
 layout: post
 title: thread_join
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

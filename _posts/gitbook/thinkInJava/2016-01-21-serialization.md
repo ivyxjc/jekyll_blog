@@ -1,7 +1,7 @@
 ---
 layout: post
 title: serialization
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

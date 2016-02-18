@@ -1,7 +1,7 @@
 ---
 layout: post
 title: bufferedreaderandprintwriter
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

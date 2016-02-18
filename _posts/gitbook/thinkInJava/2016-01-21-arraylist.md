@@ -1,7 +1,7 @@
 ---
 layout: post
 title: arraylist
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

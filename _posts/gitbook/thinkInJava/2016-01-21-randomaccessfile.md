@@ -1,7 +1,7 @@
 ---
 layout: post
 title: randomaccessfile
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:

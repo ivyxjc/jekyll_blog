@@ -1,7 +1,7 @@
 ---
 layout: post
 title: transient
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:
@@ -9,6 +9,7 @@ description:
 # transient
 
 自己完成序列化**必须实现具有下面签名的方法**<br>
+
 ```java
  private void writeObject(java.io.ObjectOutputStream out)
      throws IOException

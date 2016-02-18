@@ -1,7 +1,7 @@
 ---
 layout: post
 title: serialization_basic_usage
-category: GitBook
+category: 
 tags: [java]
 keywords:
 description:
