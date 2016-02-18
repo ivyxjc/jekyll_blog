@@ -9,14 +9,14 @@ author:
   link: xuejc.tk
   github: https://github.com/ivyxjc
 
-url: https://xuejc.tk
-enforce_ssl: xuejc.tk
+
 
 
 # 站点信息
 title: Ivyxjc
 description: My personal blog
-url: 
+url: https://xuejc.tk
+enforce_ssl: xuejc.tk
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
