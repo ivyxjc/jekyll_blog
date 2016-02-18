@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 
+title: CodeforcesEduRound7总结
 category: OJ
-tags: []
+tags: [onlinejudge]
 keywords:
 description:
 ---
