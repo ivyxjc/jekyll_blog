@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>404 Not Found Error</title>
+  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="author" content="{{ site.author.name }}">
   {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords }}">
@@ -25,6 +25,7 @@
       <div class="col-md-13 col-lg-13 col-sm-13 col-xs-13 aside3">
         <div id="container">
           <div id="pjax">
+          {{content}}
           </div>
         </div>
       </div>
