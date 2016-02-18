@@ -34,6 +34,7 @@ active:
 
 # 首页除了最新文章外显示分类
 cates: 
+  - OJ
   - java
   - android
 

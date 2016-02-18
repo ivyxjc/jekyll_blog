@@ -1,12 +1,14 @@
 ---
 layout: post
 title: 部署jekyll博客
-category: 
+category: Web
 tags: []
 keywords:
 description:
 ---
+
 # 创建
+
 ```clone```代码下来，更改```_config.yml```及其它地方的一些内容。详见[Github](https://github.com/ivyxjc/ivyxjc.github.io)的```REAAME.md```。
 
 
