@@ -248,7 +248,7 @@ Statement 2: denote ax — the time of appearing the x-th leaf in the vertex v, 
 
 Statement 3: $$a_{z_i+1}=max(d_{z_i}+1,a_{z_i}+1)$$, where $$d_x$$ is the depth of the x-th leaf in the subtree of the vertex v. The last statement gives us the solution for the problem: we should simply iterate over z from left to right and recalculate the array a by formula from the third statement. All statements can be easily proved and it's recommended to do by yourself to understand better the idea of the solution.
 
-####代码实现
+#### 代码实现
 
 ##### 建图
 
@@ -299,7 +299,7 @@ public void dfs(){
 
 ##### solve()代码
 
-```solve()```代码的作用就是先将```depthArray```中的每一```个ArrayList```按从小到大排序，再对每一个ArrayList中的数据进行$$max(d_{z_i}+1,a_{z_i}+1)$$比较，最后```depthArray```数组中每一个```个ArrayList```的resMax比较取最大的值。
+```solve()```代码的作用就是先将```depthArray```中的每一```个ArrayList```按从小到大排序，再对每一个ArrayList中的数据进行$$max(d_{z_i}+1,a_{z_i}+1)$$比较，最后```depthArray```数组中每一个```ArrayList```的resMax比较取最大的值。
 
 ```java
 public int solve(){
