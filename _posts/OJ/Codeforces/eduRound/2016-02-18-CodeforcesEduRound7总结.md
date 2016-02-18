@@ -10,8 +10,8 @@ description:
 [题目网址](http://codeforces.com/contest/622/)
 ## A:Infinite Sequence
 
-$$\sum_{k=1}^n k=\frac {(1+n)*n}{2}$$
-A题比较简单,主要就利用![公式][1]<img src="http://latex.codecogs.com/png.latex?\fn_cm&space;\sum_{k=1}^n&space;k=\frac&space;{(1&plus;n)*n}{2}" title="\sum_{k=1}^n k=\frac {(1+n)*n}{2}" />来确定距离所要求的数字最近的一个1所在的位置。然后就可得到该数值了。
+
+A题比较简单,主要就利用公式$$\sum_{k=1}^n k=\frac {(1+n)*n}{2}$$来确定距离所要求的数字最近的一个1所在的位置。然后就可得到该数值了。
 代码如下
 ```java
 public class Round7_A{
@@ -67,6 +67,3 @@ df.format(num);
 
 
 
-
-
-  [1]: /assets/img/posts/sumOfN.gif 
