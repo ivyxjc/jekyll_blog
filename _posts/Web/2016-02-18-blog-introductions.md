@@ -6,6 +6,7 @@ tags: []
 keywords:
 description:
 ---
+第一次部署jekyll博客，也折腾了好一会。
 
 # 创建
 
