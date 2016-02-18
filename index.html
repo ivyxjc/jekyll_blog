@@ -19,7 +19,7 @@ titlename: 首页
     <div class="col-md-12">
       <div class="panel panel-primary">
         <div class="panel-heading">{{ cate }}</div>
-        {% for category in site.category %} 
+        {% for category in site.categories %} 
           {% if category[0] == cate %}
             {% for post in category[1] %}
               <a  href='{{ post.url }}' class="list-group-item pjaxlink clearfix">
