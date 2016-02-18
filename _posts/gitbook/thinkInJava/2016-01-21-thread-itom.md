@@ -2,7 +2,7 @@
 layout: post
 title: thread_itom
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,thread ]
 keywords:
 description:
 ---

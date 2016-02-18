@@ -2,7 +2,7 @@
 layout: post
 title: randomaccessfile
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,file,io,javaio]
 keywords:
 description:
 ---

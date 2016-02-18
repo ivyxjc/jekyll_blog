@@ -18,6 +18,7 @@ description:
 对象必须实现序列化借口，才能进行序列化，否则将出现异常<br>
 该接口无任何方法，只是规定<br>
 自己完成序列化**必须实现具有下面签名的方法**<br>
+
 ```java
  private void writeObject(java.io.ObjectOutputStream out)
      throws IOException

@@ -2,11 +2,12 @@
 layout: post
 title: thread_sleep
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,thread ]
 keywords:
 description:
 ---
 # Sleep
+
 ```java
 
 TimeUnit.MILLISECONDS.sleep(100);是较新的用法
