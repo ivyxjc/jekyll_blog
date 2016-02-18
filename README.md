@@ -14,4 +14,6 @@
 
 并在_config.yml中将markdown改为kramdown<br>
 
+4.原博首页展示的是按tags来分的，我改为了按照categoris来分。代码[b497f73](https://github.com/ivyxjc/ivyxjc.github.io/commit/b0032df15246c81a695b4d6bf5f970bac14b3be8#diff-eacf331f0ffc35d4b482f1d15a887d3b)。
+
 
