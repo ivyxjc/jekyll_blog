@@ -2,13 +2,14 @@
 layout: post
 title: arraylist
 category: 
-tags: [javagitbook ]
+tags: [javagitbook , arraylist]
 keywords:
 description:
 ---
 # ArrayList
 
 ##ArrayList在java api中的结构
+
 ```
 java.lang.Object
    java.util.AbstractCollection<E>

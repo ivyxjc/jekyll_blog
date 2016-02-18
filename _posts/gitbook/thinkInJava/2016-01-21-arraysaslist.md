@@ -2,11 +2,12 @@
 layout: post
 title: arraysaslist
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,arraylist ]
 keywords:
 description:
 ---
 # Arrays.asList()的一些问题
+
 ```java
 class Snow{
     public String toString(){

@@ -2,7 +2,7 @@
 layout: post
 title: bufferedreaderandprintwriter
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,javaio,io]
 keywords:
 description:
 ---

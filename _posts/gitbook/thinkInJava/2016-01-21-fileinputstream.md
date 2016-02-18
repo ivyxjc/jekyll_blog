@@ -2,7 +2,7 @@
 layout: post
 title: fileinputstream
 category: 
-tags: [javagitbook ]
+tags: [javagitbook ,javaio,io]
 keywords:
 description:
 ---

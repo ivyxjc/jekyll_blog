@@ -2,7 +2,7 @@
 layout: post
 title: char_stream
 category: 
-tags: [javagitbook ]
+tags: [javagitbook,javaio,io ]
 keywords:
 description:
 ---
