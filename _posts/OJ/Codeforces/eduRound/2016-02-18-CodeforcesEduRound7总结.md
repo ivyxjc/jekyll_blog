@@ -8,11 +8,13 @@ description:
 ---
 
 [题目网址](http://codeforces.com/contest/622/)
+
 ## A:Infinite Sequence
 
 
 A题比较简单,主要就利用公式$$\sum_{k=1}^n k=\frac {(1+n)*n}{2}$$来确定距离所要求的数字最近的一个1所在的位置。然后就可得到该数值了。
 代码如下
+
 ```java
 public class Round7_A{
         public static void main(String[] args){
