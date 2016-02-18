@@ -4,7 +4,6 @@ var host = "xuejc.tk";
 if ((host == window.location.host) && (window.location.protocol != "https:"))
     window.location.protocol = "https";
 </script>
-<link rel="canonical" href=" { { site.url } }{ { page.url } }" />
 <title>{{ page.titlename }} | {{ site.title }}</title>
 <meta name="author" content="{{ site.author.name }}">
 {% if page.keywords %}
@@ -13,6 +12,7 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 {% if page.description  %}
   <meta name="description " content="{{ page.description  }}">
 {% endif %}
+<link rel="canonical" href=" { { site.url } }{ { page.url } }" />
 <link rel="shortcut icon" href="{{ site.favicon }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/public/css/bootstrap.css">
