@@ -9,9 +9,6 @@ author:
   link: xuejc.tk
   github: https://github.com/ivyxjc
 
-
-
-
 # 站点信息
 title: Ivyxjc
 description: My personal blog
@@ -33,7 +30,7 @@ disqus:
   shortname: ivyxjc
 
 # 主题设置，自动激活某个标签
-active: 
+active:
 
 # 首页除了最新文章外显示分类
 cates: 
