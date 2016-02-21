@@ -6,14 +6,13 @@ markdown: kramdown
 author: 
   name: ivyxjc
   email: ivyxjc1994@hotmail.com
-  link: xuejc.tk
+  link: ivyxjc.xyz
   github: https://github.com/ivyxjc
 
 # 站点信息
 title: Ivyxjc
 description: My personal blog
-url: https://xuejc.tk
-enforce_ssl: xuejc.tk
+url: ivyxjc.xyz
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -23,7 +22,7 @@ favicon: /assets/img/identicon.png
 # google analytics 设置
 ga:
   id: UA-73862242-1
-  url: www.xuejc.tk
+  url: ivyxjc.xyz
 
 # disqus 设置
 disqus:
