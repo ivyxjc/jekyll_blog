@@ -42,7 +42,7 @@ github的语法似乎比GitBook的要求更为严格<br>
 2. 列表上下都要空出一行，\.后要空出一格。
 
 ## 域名 dns https
-由于使用了CloudFlare的域名，所以使用了他们的域名解析器，将nameserver改为
+由于使用了CloudFlare的SSL服务，所以使用了他们的域名解析器，将nameserver改为
 
     FRED.NS.CLOUDFLARE.COM 
     SANDY.NS.CLOUDFLARE.COM
