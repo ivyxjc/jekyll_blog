@@ -103,6 +103,66 @@ $$K_0=\frac{6}{\rho_s D_s}M_{w_c}\cdot M_s\cdot R_{axid}$$
 
 ![fig2](F:\ivyxjcUniversity\translation\images\fig2.png)
 
-本次研究的重点是喷嘴个数，喷油持续期，喷油压力和每个喷嘴喷油量和不同喷嘴之间喷油时间差对最终排放物的影响。以此取得可以使得$$$NO_x$$$和$$$soot$$$排放都较低的一个平衡点。
+本次研究的重点是喷油次数，喷油持续期，喷油压力和每次喷油量和喷油间隔对最终排放物的影响。以此取得可以使得$$$NO_x$$$和$$$soot$$$排放都较低的一个平衡点。
 
-为了使
+为了使喷油模式的描述更为简单，我们用下面这个格式来描述喷油模式：第一次喷油量(喷油间隔)第二次喷油量-第一次喷油时间。例如，90(8)10-2表示第一次喷90%的油，隔$$$5^\circ CA$$$喷第二次油，第二次喷油量为10%，第一次喷油始点在上止点后$$$2^\circ CA$$$。随着前后喷油量不同，这些喷油模式可分为预主喷模式和主后喷模式。
+
+## 结果讨论
+本论文共研究了6种喷油模式，分别为单次喷射，10(5)90-2，25(5)75-2，50(5)50-2，75(5)25-2，90(5)10-2。放热率和缸内压力图如图3所示
+![fig3_1](F:\ivyxjcUniversity\translation\images\fig3_1.png)
+![fig3_2](F:\ivyxjcUniversity\translation\images\fig3_2.png)
+![fig3_3](F:\ivyxjcUniversity\translation\images\fig3_3.png)
+由图中我们可以清楚地看到第二次喷射的喷油量为90%时，其最高放热率最低，这是因为在此情况下，燃油的混合并不好。此外，此时缸内压力曲线下的面积也变小了，这说明发动机动力收到了削弱。本次研究的目的要求是在不影响发动机动力的情况下减少排放。所以最好的模式肯定是在第一次喷油时即喷射大部分燃油。<br>
+
+表4:
+
+|喷射模式|$$$soot(gr/kW\cdot h)$$$|$$$NO_x(gr/kW\cdot h)$$$|
+|-----|---|---|
+|单次喷射|1.02|7.68|
+|10(5)90-2|3.51|3.58|
+|25(5)75-2|2.76|6.50|
+|50(5)50-2|2.59|6.8|
+|75(5)25-2|1.26|7.32|
+|90(5)10-2|1.12|7.56|
+表4展示了在这6中模式下$$$soot$$$和$$$NO_x$$$的排放量。随着第二次喷射的喷油量的增加，$$$NO_x$$$含量逐渐降低，$$$soot$$$排放量逐渐增多。这是因为$$$NO_x$$$的形成条件为高温富氧，第二次喷油量增加，放热率降低，温度降低，导致$$$NO_x$$$降低。而且此时因为混合并不均匀，燃烧不够充分，$$$soot$$$排放增加。
+
+所以找到一个平衡点，在该点出，放热率维持上述水平以维持较低的$$NO_x$$排放量，且可以进一步促成$$$soot$$$氧化，降低$$$soot$$$含量。我们采用在75(5)25-2和90(5)10-2基础上增大两次喷射的喷油间隔来进一步寻找更好的喷油模式。
+
+图4展示了75($$$\alpha$$$)25-2喷油模式下的放热率曲线和缸内压力曲线，其中$$$\alpha$$$取值8,20,30,35和40$$$^\circ CA$$$。
+![fig4_1](F:\ivyxjcUniversity\translation\images\fig4_1.png)
+![fig4_2](F:\ivyxjcUniversity\translation\images\fig4_2.png)
+
+图4表明增大喷油间隔并不会改变气缸最高压力。此外，随着喷油间隔的逐渐增大，逐渐形成了一个由第二次喷油引起的放热率的次高峰。这一现象展示了整个燃烧过程的最后一步，由第二次喷射引起的一次快速的预混，扩散燃烧。由90($$$\alpha$$$)10-2喷油模式得到的数据和75($$$\alpha$$$)25-2的基本相同，本论文并未予以展示。
+
+
+
+
+
+## 参考文献
+[1]  D. A. Pierpont and R.  D. Reitz, Effects of injection pressureand nozzle geometry on emissions and  performance in a D.Idiesel, SAE Paper 950604, 1995.
+[2]  T. F. Su, M. A.  Patterson, R. D. Reitz and P. V. Farrell,  Ex-perimental and  numerical studies  of high  pressure multipleinjection sprays, SAE Technical Paper 960861, 1996.
+[3]  T. C. Tow, D. A Pierpont and R. D. Reitz, Reducing particu-late and NOx emissions by  using  multiple  injections  in axheavy duty DI diesel engine, SAE Paper 950897, 1995.
+[4]  S.   Mendez  and   B.  Thirouard,   Using  multiple   injectionstrategies in  diesel combustion:  potential  to improve  emis-sions, noise and  fuel economy trade-off in  low CR engines,SAE Technical Paper 2008-8-01- 1329, 2008.
+[5]  M. Halstead, L. Kirsch and  C. Quinine, The auto ignition ofhydrocarbon fueled  at high temperature and  pressure fittingof mathematical  model, Combustion Flame,  30 (45) (1997)45-60.
+[6]  Y.  Liu, F.  Tao, D.  Foster and  R. D.  Reitz,  Application of multiple-step phenomenological soot  model to HSDI dieselmultiple injection modeling, SAE  Technical Paper 2005 01-0924, 2005.
+[7]  T. Lee, An experimental study  of emission reduction mecha-nisms in a high speed direct injection diesel engine with mul-tiple injection and EGR, PhDs Thesis, University of Wiscon-sin-Madison, USA (2002).
+[8]  J.  B. Heywood,  Internal  combustion engine  fundamentals,McGraw-Hill Publishing Company, New York, USA (1998).
+[9]  A. A. Amsden, P. J. O’ Rourke and T. D. Butler, KIVA-II: Acomputer program for chemically reactive flows with sprays,Los   Alamos  National   Laboratory,   LA-11560-MS,  USA(1989).
+[10]  M. P. Halstead,  L. J. Kirsch, A.  Prothero and C. P. Quinn,A mathematical model for hydrocarbon auto ignition at highpressures, Proc. R. Soc. Lond. A., 364 (1975) 515-538.
+[11]  S. -C. Kong, Z. Han and R. D. Reitz, The development andapplication  of a  diesel  ignition and  combustion  model formultidimensional  engine  simulation,   SAE  Paper  950278,1995.
+[12]  J. Abraham, F. V. Bracco  and R. D. Reitz, Comparisons ofcomputed  and measured  premixed  charge engine  combus-tion, Combustion and Flame, 60 (1985) 309-322.
+[13]  R.  D.   Reitz,  Modeling   atomization  processes  in   high-pressure  vaporization spray,  Atomization  and  Spray  Technology, 3 (1987) 309-37.
+[14]  C. T. Bowman, Kinetics of pollutant formation and destruction  in combustion,  Prog. Energy  Combust.  Sci., 1  (1975)33-45.
+[15]  M.  A. Patterson,  S.-C.  Kong,  G. J.  Hampson  and  R. D.Reitz, Modeling  the effects  of fuel  injection characteristicson diesel engine soot and NOx emission, SAE Paper  940523,1994.
+[16]  J. Nagle  and R. F. Strickland-Constable,  Oxidation of car-bon  between 1000-2000º  C, Int.  Journal  of Carbon,  1 (3)(1964) 333-338.
+[17]  D. A. Nehmer  and R. D.  Reitz, Measurement of the  effectof injection rate and split injections on diesel engine soot andNOx emissions, SAE Paper 940668 (1994).
+[18]  S.  Shundoh, M.  Komori, K.  Tsujimur  and S.  Kobayashi,NOx reduction from  diesel combustion using pilot  injectionwith high pressure fuel injection, SAE Paper 920461 (1992).
+[19]  D. T. Montgomery and R. D. Reitz, Six-mode cycle evalua-tion of the effect of  EGR and multiple injections on particulate and NOx emissions from a D.I. diesel Engine, SAE Paper 960316(1996).
+[20]  D. A. Nehmer  and R. D.  Reitz, Measurement of the  effectcombustion simulation and experiment in internal combustion engines, diesel engines performance, and emission reduction. 
+[21]  K.  Poorghasemi,  F. Ommi  and  V.  Esfahanian, Effect  ofhigh pressure post injection on soot and NO trade off in a DIdiesel engine, ASME Technical Paper, IMECE2010-307013,
+British Columbia Uni., Canada (2010).
+[22]  M. K. Bobba,  M. P. B. Musculus, Effect  of post injectionson cylinder  and exhaust  soot for  low temperature  combus-tion  in  a heavy-duty  diesel  engine,  SAE  Technical  Paper
+2010-01-0612, 2010.
+
+
+
