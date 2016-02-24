@@ -5,13 +5,9 @@ category: Android
 tags: [android,android layout]
 keywords:
 description:
-------------
+---
 
 ## Android Layout_Gravity和Gravity
-
-标签（空格分隔）： Android
-
----
 
 简单来说layout_gravity表示子控件在父容器的位置，gravity表示控件内容在控件内的位置。
 ![如图所示][1]
