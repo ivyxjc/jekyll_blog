@@ -12,7 +12,7 @@ description:
 &nbsp;&nbsp;&nbsp;&nbsp;HTML注释:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;隐藏注释（JSP专有注释）<br>
 
-##HTML注释
+## HTML注释
 HTML注释能在客户端代码中显示，且其中所有的脚本元素，指令和动作将正常执行。编译器会扫描注释内的内容
 ```html
 <!--注释-->
@@ -25,13 +25,13 @@ HTML注释能在客户端代码中显示，且其中所有的脚本元素，指�
 ```
 
 
-##JSP注释
+## JSP注释
 
 ```jsp
 <%--注释--%>客户端不可见
 ```
 
 
-##JSP脚本注释
+## JSP脚本注释
 
 与java注释相同
