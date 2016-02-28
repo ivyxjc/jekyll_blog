@@ -2,7 +2,7 @@
 layout: post
 title: JavaWebGitbook
 category: Web
-tags: [javawebgitbook,jsp,javaweb,servlet]
+tags: [javawebgitbook]
 keywords:
 description:
 ---
