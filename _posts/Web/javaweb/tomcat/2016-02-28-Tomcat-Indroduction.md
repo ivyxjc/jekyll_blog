@@ -28,5 +28,18 @@ description:
 </web-app>
 ```
 
+## 修改tomcat端口号
+
+**tomcat/conf/server.xml**内有
+
+```xml
+<Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+```
+
+修改port值即可改变端口号
+
+
 
 
