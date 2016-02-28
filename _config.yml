@@ -35,8 +35,8 @@ active:
 # 首页除了最新文章外显示分类
 cates:  
   - OJ
-  - java
   - Web
+  - Android
 
 # 中文本地化
 locals:
