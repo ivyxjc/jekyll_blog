@@ -120,7 +120,12 @@ case R.id.showDialog:{
 
     break;
 }
-
 ```
+
+![](assets/img/posts/progressdialog.gif)
+
+## 自定义ProgressBar的样式
+
+ProgressBar的样式是可以自定义的，可参考默认的样式更改。
 
 
