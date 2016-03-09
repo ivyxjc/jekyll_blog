@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用WebView显示网页
+title: ProgressBar和ProgressDialog
 category: Android
 tags: [android,androidprogressbar]
 keywords:
