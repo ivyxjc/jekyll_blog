@@ -107,5 +107,173 @@ case R.id.dynamic:{
 }
 ```
 
+## fragment生命周期
 
+关键方法：**onAttach()**,**onCreateView()**
+
+```java
+
+public class FragmentThird extends Fragment {
+    @Nullable
+    @Override
+
+    /**
+     * 每次创建会绘制Fragment的View组件时回调该方法。
+     */
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v=inflater.inflate(R.layout.fragment_third,container,false);
+//        Log.i("Main","Fragment third--onCreateView()");
+        TextView textView=(TextView)v.findViewById(R.id.textview_third);
+        textView.setText("第三个Fragment");
+        Log.i("Main","Fragment third--onCreateView()");
+        return v;
+    }
+
+
+    /**
+     * 当Fragment被添加到Activity时候会回调这个方法，并且只调用一次
+     * @param context
+     */
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Log.i("Main","Fragment third--on attach()");
+    }
+
+    /**
+     * 创建Fragment时会回调，只会调用一次
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i("Main","Fragment third--onCreate()");
+    }
+
+
+    /**
+     *当Fragment所在的Activity启动完成后调用
+     */
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.i("Main", "Fragment third--onActivityCreated()");
+    }
+
+    /**
+     * 启动Fragment
+     */
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.i("Main", "Fragment third--onStart()");
+    }
+
+
+    /**
+     * 回复Fragment时会被回调，调用onStart()方法后面一定会调用
+     * onResume方法
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i("Main", "Fragment third--onResume()");
+    }
+
+    /**
+     * 暂停Fragment
+     */
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.i("Main","Fragment third--onPause()");
+    }
+
+    /**
+     * 停止Fragment
+     */
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i("Main","Fragment third--onStop()");
+    }
+
+    /**
+     * 销毁Fragment所包含的View组件时调用
+     */
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.i("Main", "Fragment third--onDestroyView()");
+    }
+
+    /**
+     * 销毁Framgent时会被调用
+     */
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.i("Main", "Fragment third--onDestroy()");
+    }
+
+
+    /**
+     * 与onAttach()方法对应
+     * Fragment从Activity中删除时会回调该方法，并且只会调用一次
+     */
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.i("Main", "Fragment third--onDetach()");
+    }
+}
+```
+
+```java
+Log结果：
+启动应用：null
+
+启动Fragment：
+I/Main(8163): Fragment third--on attach()
+I/Main(8163): Fragment third--onCreate()
+I/Main(8163): Fragment third--onCreateView()
+I/Main(8163): Fragment third--onActivityCreated()
+I/Main(8163): Fragment third--onStart()
+I/Main(8163): Fragment third--onResume()
+
+屏幕锁屏：
+I/Main(8163): Fragment third--onPause()
+I/Main(8163): Fragment third--onStop()
+
+
+解锁：
+I/Main(8163): Fragment third--onStart()
+I/Main(8163): Fragment third--onResume()
+
+切换到其它的Fragment:
+I/Main(8163): Fragment third--onPause()
+I/Main(8163): Fragment third--onStop()
+I/Main(8163): Fragment third--onDestroyView()
+I/Main(8163): Fragment third--onDestroy()
+I/Main(8163): Fragment third--onDetach()
+
+回到桌面:
+03-12 23:23:08.651: I/Main(8163): Fragment third--onPause()
+03-12 23:23:08.657: I/Main(8163): Fragment third--onStop()
+
+
+回到Fragment:
+I/Main(8163): Fragment third--onStart()
+I/Main(8163): Fragment third--onResume()
+
+
+退出Fragment：
+I/Main(8163): Fragment third--onPause()
+I/Main(8163): Fragment third--onStop()
+I/Main(8163): Fragment third--onDestroyView()
+I/Main(8163): Fragment third--onDestroy()
+I/Main(8163): Fragment third--onDetach()
+```
 
