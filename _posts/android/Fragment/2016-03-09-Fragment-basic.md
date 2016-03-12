@@ -27,16 +27,16 @@ android:tag 提供一个唯一的字符串tag
 静态加载Fragment必须要给Fragment一个唯一的标识。
 
 文件目录：
-——src
-————FragmentFirst.java (extends Fragment)
-————MainActivity.java   (extends Activity)
-————MainFirst.java	(extends Activity)
-
-——layout
-————fragment_container.xml
-————fragment_first.xml
-————main.xml
-————main_first.xml
+——src<br>
+————FragmentFirst.java (extends Fragment)<br>
+————MainActivity.java   (extends Activity)<br>
+————MainFirst.java	(extends Activity)<br>
+<br>
+——layout<br>
+————fragment_container.xml<br>
+————fragment_first.xml<br>
+————main.xml<br>
+————main_first.xml<br>
 
 **FragmentFirst.java**利用**fragment_first.xml**返回一个**view**，**main_first.xml**中的**android:name="com.jc.fragmentbasic.FragmentFirst"**，然后**MainFirst**调用**setContentView(R.layout.main_first);**
 
@@ -260,8 +260,8 @@ I/Main(8163): Fragment third--onDestroy()
 I/Main(8163): Fragment third--onDetach()
 
 回到桌面:
-03-12 23:23:08.651: I/Main(8163): Fragment third--onPause()
-03-12 23:23:08.657: I/Main(8163): Fragment third--onStop()
+I/Main(8163): Fragment third--onPause()
+I/Main(8163): Fragment third--onStop()
 
 
 回到Fragment:
@@ -277,3 +277,8 @@ I/Main(8163): Fragment third--onDestroy()
 I/Main(8163): Fragment third--onDetach()
 ```
 
+## Activity和Fragment通信
+
+Activity ---> Fragment:在Activity中创建Bundle数据包，并调用Fragment的setArguments(Bundle bundle)方法。
+
+Fragment ---> Activity：需要在Fragment中定义一个内部回调接口，让包含该Fragment的Activity实现该回调接口。这样Fragment可调用回调方法将数据传递给Activity。
