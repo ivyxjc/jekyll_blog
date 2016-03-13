@@ -26,7 +26,7 @@ android:tag 提供一个唯一的字符串tag
 
 静态加载Fragment必须要给Fragment一个唯一的标识。
 
-文件目录：
+文件目录：<br>
 ——src<br>
 ————FragmentFirst.java (extends Fragment)<br>
 ————MainActivity.java   (extends Activity)<br>
