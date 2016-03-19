@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dialog
+title: Action Bar
 category: Android
 tags: [android,androiddialog,dialog]
 keywords:

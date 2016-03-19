@@ -346,3 +346,6 @@ I/Main(8163): Fragment third--onDetach()
 Activity ---> Fragment:在Activity中创建Bundle数据包，并调用Fragment的setArguments(Bundle bundle)方法。
 
 Fragment ---> Activity：需要在Fragment中定义一个内部回调接口，让包含该Fragment的Activity实现该回调接口。这样Fragment可调用回调方法将数据传递给Activity。
+
+## 相关博客网址
+[Android Fragment完全解析，关于碎片你所需知道的一切 ](http://blog.csdn.net/guolin_blog/article/details/8881711)
