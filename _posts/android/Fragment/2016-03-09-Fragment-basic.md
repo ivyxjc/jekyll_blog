@@ -157,6 +157,14 @@ case R.id.first:{
 
 如果允许使用Back键返回前一Fragment的状态，调用commit()之前可以加入addToBackStack()方法。
 
+1.获取到FragmentManager，在Activity中可以直接通过getFragmentManager得到。
+
+2.调用beginTransaction方法开启一个事务。
+
+3.向容器内加入Fragment，一般使用replace方法实现，需要传入容器的id和Fragment的实例。
+
+4.提交事务，调用commit方法提交。
+
 
 ### 加载过程代码
 
@@ -348,4 +356,4 @@ Activity ---> Fragment:在Activity中创建Bundle数据包，并调用Fragment�
 Fragment ---> Activity：需要在Fragment中定义一个内部回调接口，让包含该Fragment的Activity实现该回调接口。这样Fragment可调用回调方法将数据传递给Activity。
 
 ## 相关博客网址
-[Android Fragment完全解析，关于碎片你所需知道的一切 ](http://blog.csdn.net/guolin_blog/article/details/8881711)
+[](http://blog.csdn.net/guolin_blog/article/details/8881711)
