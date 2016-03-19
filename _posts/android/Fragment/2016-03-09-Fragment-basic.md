@@ -28,53 +28,117 @@ android:tag 提供一个唯一的字符串tag
 
 文件目录：<br>
 ——src<br>
-————FragmentFirst.java (extends Fragment)<br>
-————MainActivity.java   (extends Activity)<br>
-————MainFirst.java	(extends Activity)<br>
+————Fragment_1.java (extends Fragment)<br>
+————Fragment_2.java   (extends Activity)<br>
+————MainActivity.java	(extends Activity)<br>
 <br>
 ——layout<br>
-————fragment_container.xml<br>
-————fragment_first.xml<br>
-————main.xml<br>
-————main_first.xml<br>
+————fragment_1.xml<br>
+————fragment_2.xml<br>
+————activity_main.xml<br>
 
-**FragmentFirst.java**利用**fragment_first.xml**返回一个**view**，**main_first.xml**中的**android:name="com.jc.fragmentbasic.FragmentFirst"**，然后**MainFirst**调用**setContentView(R.layout.main_first);**
+**Fragment1.java**利用**fragment_1.xml**返回一个**view**，**activity.xml**中的**android:name="com.jc.fragmentbasic.FragmentFirst"**，然后**MainActivity**调用**setContentView(R.layout.activity_main);**
 
 
-### fragment_container.xml
+### fragment_1和fragment_2.xml和activity_main.xml
 
-```xml
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android_fragment.MainActivity"
-    tools:ignore="MergeRootFrame" />
+```xml 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is fragment 1"
+        android:textColor="#0000FF"
+        android:textSize="25sp"
+        android:background="#00FF00"/>
+
+</LinearLayout>
 ```
-
-
-### main_first.xml
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/fragment_first"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.jc.fragmentbasic.FragmentFirst"/>
+        android:text="This is fragment 2"
+        android:textColor="#FF0000"
+        android:background="#00F0F0"
+        android:textSize="25sp" />
 
 </LinearLayout>
+```
+
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:orientation="horizontal">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.jc.fragment_1.Fragment_1"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.jc.fragment_1.Fragment_2"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
+```
+
+### Fragment_1.java和Fragment_2.java和MainActivity.java
+
+```java
+public class Fragment_1 extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_1,container,false);
+    }
+}
+```
+
+```java
+public class Fragment_2 extends Fragment{
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_2,container,false);
+    }
+}
+```
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
 ```
 
 ### 加载过程的代码
 
 ```java
 case R.id.first:{
-    Intent intent=new Intent(this,MainFirst.class);
+    Intent intent=new Intent(this,MainActivity.class);
     startActivity(intent);
     break;
 }
@@ -82,7 +146,7 @@ case R.id.first:{
 
 ### 效果
 
-![](assets/img/posts/fragment_first.gif)
+![](assets/img/posts/fragment_basic_1.png)
 
 
 ## 动态加载

@@ -8,7 +8,7 @@ description:
 ---
 
 ## 设备相关
-**adb devices**:查看连接的设备
+**adb devices**:查看连接的设备<br>
 **adb -s <serial number> shell**:serial number及上命令得到的设备编号
 
 ## 录制屏幕相关
