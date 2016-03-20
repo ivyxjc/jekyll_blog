@@ -25,6 +25,7 @@ description:
 动态注册的广播接收器一定要取消注册，一般是在**onDestroy()**方法中通过调用**unregisterReceiver()**方法来实现的。
 
 ###　动态注册
+
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -104,7 +105,35 @@ public class MainActivity extends AppCompatActivity {
 
 #### 效果
 
-![](![](assets/img/posts/broadcast_network_connectivity.gif)
+![](assets/img/posts/broadcast_network_connectivity.gif)
 
 
 ### 静态注册
+
+```java
+public class BootCompleteReceiver extends BroadcastReceiver{
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context,"Boot Complete",Toast.LENGTH_LONG).show();
+    }
+}
+```
+
+在AndroidManifest.xml中需要添加下列语句：
+
+```xml
+<user-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+......
+<application
+	...>
+	.....
+    
+    <receiver android:name=".BootCompleteReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        </intent-filter>
+    </receiver>
+    
+</application>
+```
