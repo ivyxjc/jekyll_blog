@@ -136,6 +136,3 @@ public class BootCompleteReceiver extends BroadcastReceiver{
     
 </application>
 ```
-
-afas$$$aaa$$$afas
-$$aa$$
