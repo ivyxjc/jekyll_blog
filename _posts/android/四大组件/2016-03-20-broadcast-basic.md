@@ -23,7 +23,6 @@ description:
 
 动态注册的广播接收器一定要取消注册，一般是在**onDestroy()**方法中通过调用**unregisterReceiver()**方法来实现的。
 
-
 ###　动态注册
 
 ```java
