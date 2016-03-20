@@ -1,6 +1,10 @@
 permalink: /:year-:month-:day-:title.html
 paginate: 10
+
 markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "quote", "highlight", "tables", "footnotes", "hard_wrap"]
+highlighter: pygments
 
 # 作者信息
 author: 

@@ -7,7 +7,7 @@ keywords:
 description:
 ---
 
-# 分类
+## 分类
 
 标准广播(Normal broadcasts)是一种完全异步执行的广播，在广播发出后，所有的广播接收器都在同一时刻受到这条广播消息，没有先后顺序。效率高，无法被截断。
 
@@ -16,14 +16,14 @@ description:
 
 接受广播：广播接收器(Broadcast Receiver)
 
-# 系统广播
+## 系统广播
 
 
-# 注册广播
+## 注册广播
 
 动态注册的广播接收器一定要取消注册，一般是在**onDestroy()**方法中通过调用**unregisterReceiver()**方法来实现的。
 
-##　动态注册
+###　动态注册
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -102,12 +102,12 @@ public class MainActivity extends AppCompatActivity {
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-### 效果
+#### 效果
 
 ![](assets/img/posts/broadcast_network_connectivity.gif)
 
 
-## 静态注册
+### 静态注册
 
 ```java
 public class BootCompleteReceiver extends BroadcastReceiver{
