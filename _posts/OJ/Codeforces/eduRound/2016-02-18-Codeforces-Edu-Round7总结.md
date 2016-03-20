@@ -12,7 +12,7 @@ description:
 ## A:Infinite Sequence
 
 
-A题比较简单,主要就利用公式$$\sum_{k=1}^n k=\frac {(1+n)*n}{2}$$来确定距离所要求的数字最近的一个1所在的位置。然后就可得到该数值了。<br>
+A题比较简单,主要就利用公式$$$\sum_{k=1}^n k=\frac {(1+n)*n}{2}$$$来确定距离所要求的数字最近的一个1所在的位置。然后就可得到该数值了。<br>
 代码如下：
 
 ### 代码
@@ -67,7 +67,7 @@ df.format(num);
 ## C. Not Equal on a Segment
 
 ### 题目
-题意为查询一个数组的某一区间是否存在指定的$$x$$不相同的数，若不存在输出-1，否则输出任意一个不相同的树的秩。<br>
+题意为查询一个数组的某一区间是否存在指定的$$$x$$$不相同的数，若不存在输出-1，否则输出任意一个不相同的树的秩。<br>
 
 ### 解法介绍
 1.暴力解法就是遍历整个区间，但时间肯定不够。<br>
@@ -75,7 +75,7 @@ df.format(num);
 2.线段树法：线段树广泛用于区间查询，但是该题仅需输出任意一个不相同的树的位置即可，所以可以不用该法。(其实我还没有特别熟线段树)
 
 3.解法：设输入数据的数组为```array[]```<br>
-创建一个数组```diff[]=new int[arrayLength]```使其任意秩```diff[i]```值为满足$$a_j\ne a_i (j>i)$$的第一个j的值。这也是官方答案所给的解法。代码如下：<br>
+创建一个数组```diff[]=new int[arrayLength]```使其任意秩```diff[i]```值为满足$$$a_j\ne a_i (j>i)$$$的第一个j的值。这也是官方答案所给的解法。代码如下：<br>
 
 ### 边界条件
 该代码需要考虑到的边界条件有：<br>
@@ -244,9 +244,9 @@ Let z be the array of the depths of all leaves in the subtree of the vertex v. L
 
 Statement 1: it's profitable to lift the leaves in order of their appearing in z. 
 
-Statement 2: denote ax — the time of appearing the x-th leaf in the vertex v, let's consider the leaves $$z_i$$ and $$z_{i+1}$$ then  $$a_{z_i+1} \geq  a_{z_i}+1$$. 
+Statement 2: denote ax — the time of appearing the x-th leaf in the vertex v, let's consider the leaves $$$z_i$$$ and $$$z_{i+1}$$$ then  $$$a_{z_i+1} \geq  a_{z_i}+1$$$. 
 
-Statement 3: $$a_{z_i+1}=max(d_{z_i}+1,a_{z_i}+1)$$, where $$d_x$$ is the depth of the x-th leaf in the subtree of the vertex v. The last statement gives us the solution for the problem: we should simply iterate over z from left to right and recalculate the array a by formula from the third statement. All statements can be easily proved and it's recommended to do by yourself to understand better the idea of the solution.
+Statement 3: $$$a_{z_i+1}=max(d_{z_i}+1,a_{z_i}+1)$$$, where $$$d_x$$$ is the depth of the x-th leaf in the subtree of the vertex v. The last statement gives us the solution for the problem: we should simply iterate over z from left to right and recalculate the array a by formula from the third statement. All statements can be easily proved and it's recommended to do by yourself to understand better the idea of the solution.
 
 #### 代码实现
 
@@ -299,7 +299,7 @@ public void dfs(){
 
 ##### solve()代码
 
-```solve()```代码的作用就是先将```depthArray```中的每一```个ArrayList```按从小到大排序，再对每一个ArrayList中的数据进行$$max(d_{z_i}+1,a_{z_i}+1)$$比较，最后```depthArray```数组中每一个```ArrayList```的resMax比较取最大的值。
+```solve()```代码的作用就是先将```depthArray```中的每一```个ArrayList```按从小到大排序，再对每一个ArrayList中的数据进行$$$max(d_{z_i}+1,a_{z_i}+1)$$$比较，最后```depthArray```数组中每一个```ArrayList```的resMax比较取最大的值。
 
 ```java
 public int solve(){
