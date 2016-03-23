@@ -21,9 +21,9 @@ description:
 
 ## 注册广播
 
-动态注册的广播接收器一定要取消注册，一般是在**onDestroy()**方法中通过调用**unregisterReceiver()**方法来实现的。
+动态注册的广播接收器一定要取消注册，一般是在`onDestroy()`方法中通过调用`unregisterReceiver()`方法来实现的。
 
-###　动态注册
+### 动态注册
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -159,7 +159,7 @@ sendBroadcast(intent);
 
 在一个应用程序中发出的广播，也是可以被其它应用程序所接收到的。
 
-### 发送有序广播
+## 发送有序广播
 
 ```java
 sendOrderedBroadcast(Intent intent,String receiverPermission);
