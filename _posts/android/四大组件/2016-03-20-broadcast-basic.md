@@ -136,3 +136,56 @@ public class BootCompleteReceiver extends BroadcastReceiver{
     
 </application>
 ```
+
+
+## 自定义广播
+写一个自定义的广播接收器
+
+```java
+public class MyBroadcastReceiver extends BroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context,"received in MyBroadcastReceiver", Toast.LENGTH_LONG).show();
+    }
+}
+```
+发出一个广播
+
+```java
+Intent intent=new Intent("com.jc.broadcast_1.MY_BROADCAST");
+sendBroadcast(intent);
+```
+
+在一个应用程序中发出的广播，也是可以被其它应用程序所接收到的。
+
+### 发送有序广播
+
+```java
+sendOrderedBroadcast(Intent intent,String receiverPermission);
+```
+
+这样可以截断广播，
+在`onReceiver(...)`方法里调用`abortBroadcast()`方法，就表示将这条广播截断。后面的广播就无法再接收到这条广播。
+
+## 本地广播
+
+只能在应用程序的内部进行传递，并且广播接收器也只能接受来自本应用发出的广播。
+
+
+```java
+mLocalBroadcastManager=LocalBroadcastManager.getInstance(this);
+
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent("com.jc.broadcast_2.LOCAL_BROADCAST");
+        mLocalBroadcastManager.sendBroadcast(intent);
+    }
+});
+
+mIntentFilter=new IntentFilter();
+mIntentFilter.addAction("com.jc.broadcast_2.LOCAL_BROADCAST");
+mLocalReceiver=new LocalReceiver();
+mLocalBroadcastManager.registerReceiver(mLocalReceiver,mIntentFilter);
+```
