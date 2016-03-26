@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 跨程序共享数据
+title: Notification初步
 category: Android
 tags: [android,androidfragment,fragment]
 keywords:
@@ -52,7 +52,7 @@ manager.cancel(11);
 Uri soundUri=Uri.fromFile(new File("/system/media/audio/ringtones/Boxbeat.ogg"));
 builder.setSound(soundUri);
 
-//设置震动
+//设置震动上
 //下标为偶数和0的标识手机静止的时长，奇数标识手机震动的时长
 long [] vibrates={0,1000,1000,1000,1000,1000};
 builder.setVibrate(vibrates);
