@@ -131,11 +131,12 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 ```
 
 ### 删除数据
-可以使用
-`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
-第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。
+可以使用`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
+第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。<br>
 
 ###　查询数据
+
+query()参数介绍：
 
 | query()方法参数 | 对应SQL部分|描述 |
 |--------|--------|--------|
@@ -147,6 +148,7 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 |having |   having column=value |对group by后的结果进一步约束    |
 |orderBy | order by column1, column2 |  指定查询结果的排序方式  |
 
+
 查询表中所有数据
 `Cursor cursor = db.query("Book", null, null, null, null, null, null);`
 
@@ -155,6 +157,7 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 
 除查询之外的所有方法可以条用`db.execSQL(...)`接执行SQL语句
 查询数据的方法时可调用它`db.rawQuery(...)`接执行SQL语句
+
 ## 代码
 
 ```java
