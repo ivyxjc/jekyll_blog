@@ -138,15 +138,15 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 
 query()参数介绍：
 
-| query()方法参数 | 对应SQL部分|描述 |
-|--------|--------|--------|
-|table |   from table_name|  指定查询的表名  |
-|columns  |   select column1,column2 |  指定查询的列名  |
-|selection  |    where column=value| 指定where的约束条件   |
-|selectionArgs |   -  |  为where中的占位符提供具体的数值  |
-|groupBy   |    group by column    |  指定需要group by的列  |
-|having |   having column=value |对group by后的结果进一步约束    |
-|orderBy | order by column1, column2 |  指定查询结果的排序方式  |
+ query()方法参数 | 对应SQL部分|描述 
+--------|--------|--------
+table |   from table_name|  指定查询的表名  
+columns  |   select column1,column2 |  指定查询的列名  
+selection  |    where column=value| 指定where的约束条件   
+selectionArgs |   -  |  为where中的占位符提供具体的数值 
+groupBy   |    group by column    |  指定需要group by的列 
+having |   having column=value |对group by后的结果进一步约束    
+orderBy | order by column1, column2 |  指定查询结果的排序方式  
 
 
 查询表中所有数据
