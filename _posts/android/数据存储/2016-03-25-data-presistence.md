@@ -115,7 +115,7 @@ db.insert("Book",null,values);
 values.clear();
 ```
 
-###更新数据
+### 更新数据
 
 可以使用
 `db.update(String Table,ContenValues values,String WhereClauses,String[] WhereArgs)`
@@ -127,10 +127,10 @@ values.clear();
 ConteValues values=new ContentValues();
 values.put("price",10.99);
 db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
-
 ```
 
 ### 删除数据
+
 可以使用`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
 第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。<br>
 
