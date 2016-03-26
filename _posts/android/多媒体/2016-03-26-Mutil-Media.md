@@ -47,6 +47,17 @@ NotificationManager manager=(NotificationManager)getSystemService(NOTIFICATION_S
 manager.cancel(11);
 ```
 
+```java
+//设置声音
+Uri soundUri=Uri.fromFile(new File("/system/media/audio/ringtones/Boxbeat.ogg"));
+builder.setSound(soundUri);
+
+//设置震动
+//下标为偶数和0的标识手机静止的时长，奇数标识手机震动的时长
+long [] vibrates={0,1000,1000,1000,1000,1000};
+builder.setVibrate(vibrates);
+```
+
 ### 效果
 
 ![](assets/img/posts/notification.gif)
