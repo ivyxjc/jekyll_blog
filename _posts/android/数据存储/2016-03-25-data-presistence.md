@@ -136,54 +136,20 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 可以使用`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
 第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。
 
+### aaa
+asfsa
+
 ###　查询数据
 
-<table>
-<thead>
-<tr>
-<th>query()方法参数</th>
-<th>对应SQL部分</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>table</td>
-<td>from table_name</td>
-<td>指定查询的表名</td>
-</tr>
-<tr>
-<td>columns</td>
-<td>select column1,column2</td>
-<td>指定查询的列名</td>
-</tr>
-<tr>
-<td>selection</td>
-<td>where column=value</td>
-<td>指定where的约束条件</td>
-</tr>
-<tr>
-<td>selectionArgs</td>
-<td>-</td>
-<td>为where中的占位符提供具体的数值</td>
-</tr>
-<tr>
-<td>groupBy</td>
-<td>group by column</td>
-<td>指定需要group by的列</td>
-</tr>
-<tr>
-<td>having</td>
-<td>having column=value</td>
-<td>对group by后的结果进一步约束</td>
-</tr>
-<tr>
-<td>orderBy</td>
-<td>order by column1, column2</td>
-<td>指定查询结果的排序方式</td>
-</tr>
-</tbody>
-</table>
+query()方法参数 | 对应SQL部分|描述
+--------|--------|--------
+table |   from table_name|  指定查询的表名
+columns  |   select column1,column2 |  指定查询的列名
+selection  |    where column=value| 指定where的约束条件
+selectionArgs |   -  |  为where中的占位符提供具体的数值
+groupBy   |    group by column    |  指定需要group by的列
+having |   having column=value |对group by后的结果进一步约束
+orderBy | order by column1, column2 |  指定查询结果的排序方式
 
 
 `Cursor cursor = db.query("Book", null, null, null, null, null, null);`
