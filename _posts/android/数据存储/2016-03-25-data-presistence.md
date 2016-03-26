@@ -138,7 +138,6 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 
 ### 查询数据
 
-
 query()方法参数 | 对应SQL部分|描述
 --------|--------|--------
 table |   from table_name|  指定查询的表名
