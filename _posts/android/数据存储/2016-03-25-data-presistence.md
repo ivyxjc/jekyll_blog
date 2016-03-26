@@ -102,7 +102,7 @@ create table Book{
  3.`text`：文本类型
  4.`blob`：二进制类型
 
-###　添加数据
+### 添加数据
 
 ```java
 SQLiteDatabase db=dbHelper.getWritableDatabase();      /向数据库中添加数据
@@ -114,6 +114,7 @@ values.put("price", 16.96);
 db.insert("Book",null,values);
 values.clear();
 ```
+的
 
 ### 更新数据
 
