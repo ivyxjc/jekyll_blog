@@ -136,10 +136,8 @@ db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
 可以使用`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
 第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。
 
-### aaa
-asfsa
+### 查询数据
 
-###　查询数据
 
 query()方法参数 | 对应SQL部分|描述
 --------|--------|--------
