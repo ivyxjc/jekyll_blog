@@ -105,7 +105,7 @@ create table Book{
 ### 添加数据
 
 ```java
-SQLiteDatabase db=dbHelper.getWritableDatabase();      /向数据库中添加数据
+SQLiteDatabase db=dbHelper.getWritableDatabase();
 ContentValues values=new ContentValues();
 values.put("author","Dan Brown");
 values.put("name","The Da Vinci Code");
@@ -114,7 +114,8 @@ values.put("price", 16.96);
 db.insert("Book",null,values);
 values.clear();
 ```
-的
+
+向数据库中添加数据
 
 ### 更新数据
 
@@ -149,8 +150,9 @@ groupBy   |    group by column    |  指定需要group by的列
 having |   having column=value |对group by后的结果进一步约束
 orderBy | order by column1, column2 |  指定查询结果的排序方式
 
-查询表中所有数据
+
 `Cursor cursor = db.query("Book", null, null, null, null, null, null);`
+上式查询表中所有数据
 
 
 ### 直接使用SQL语句
