@@ -79,3 +79,154 @@ String name=preferences.getString("name", "");
 boolean married=preferences.getBoolean("married", false);
 int age=preferences.getInt("age",0);
 ```
+
+## SQLite
+
+安卓提供了一个`SQLiteOpenHelper`帮助类，可以借助这个类对数据库进行创建和升级。
+
+### 建表
+
+```sql
+//建表
+create table Book{
+	id integer primary key autoincrement,
+    author text,
+    price real,
+    pages integer,
+    name text,
+}
+```
+
+ 1.`integer`:整型
+ 2.`real`：浮点型
+ 3.`text`：文本类型
+ 4.`blob`：二进制类型
+
+###　添加数据
+
+```java
+SQLiteDatabase db=dbHelper.getWritableDatabase();      /向数据库中添加数据
+ContentValues values=new ContentValues();
+values.put("author","Dan Brown");
+values.put("name","The Da Vinci Code");
+values.put("pages",454);
+values.put("price", 16.96);
+db.insert("Book",null,values);
+values.clear();
+```
+
+###更新数据
+
+可以使用
+`db.update(String Table,ContenValues values,String WhereClauses,String[] WhereArgs)`
+
+第三个参数对应SQL语句中的`where`，其中用`?`作占位符，第四个参数则表示`?`的内容。
+
+```java
+//表示将name为The Da Vinci Code 的价格改为10.99
+ConteValues values=new ContentValues();
+values.put("price",10.99);
+db.update("Book",values,"name=?",new String[]{"The Da Vinci Code"})；
+
+```
+
+### 删除数据
+可以使用
+`db.delete(String Table,String WhereClauses,String[] WhereArgs)`
+第二，三两个参数用来约束删除某一行或几行的数据，不指定的话就默认删除所有行。
+
+###　查询数据
+
+| query()方法参数 | 对应SQL部分|描述 |
+|--------|--------|--------|
+|table |   from table_name|  指定查询的表名  |
+|columns  |   select column1,column2 |  指定查询的列名  |
+|selection  |    where column=value| 指定where的约束条件   |
+|selectionArgs |   -  |  为where中的占位符提供具体的数值  |
+|groupBy   |    group by column    |  指定需要group by的列  |
+|having |   having column=value |对group by后的结果进一步约束    |
+|orderBy | order by column1, column2 |  指定查询结果的排序方式  |
+
+查询表中所有数据
+`Cursor cursor = db.query("Book", null, null, null, null, null, null);`
+
+
+### 直接使用SQL语句
+
+除查询之外的所有方法可以条用`db.execSQL(...)`接执行SQL语句
+查询数据的方法时可调用它`db.rawQuery(...)`接执行SQL语句
+## 代码
+
+```java
+public class MyDatabaseHelper extends SQLiteOpenHelper {
+    private Context mContext;
+
+    public static final String CREATE_BOOK="create table Book (" +
+            "id integer primary key autoincrement," +
+            "author text," +
+            "price real," +
+            "pages integer," +
+            "name text)";
+            
+    public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+        mContext=context;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_BOOK);
+        //db.execSQL(CREATE_CATEGORY);
+        Toast.makeText(mContext,"Create succeeded", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("drop table if exists Book");
+        db.execSQL("drop table if exists Category");
+        onCreate(db);
+    }
+}
+```
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    private MyDatabaseHelper dbHelper;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+//最后一个数是版本号，若版本号比原先高，则会调用  SQLiteOpenHelper中的onUpgrade()。
+        dbHelper=new MyDatabaseHelper(this,"BookStore.db",null,5);
+
+        Button button=(Button)findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbHelper.getWritableDatabase();
+            }
+        });
+
+        Button addData=(Button)findViewById(R.id.add_data);
+        addData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db=dbHelper.getWritableDatabase();
+                
+                //向数据库中添加数据
+                ContentValues values=new ContentValues();
+                values.put("author","Dan Brown");
+                values.put("name","The Da");
+                values.put("pages",454);
+                values.put("price", 16.96);
+                db.insert("Book",null,values);
+                values.clear();
+            }
+        });
+    }
+}
+```
