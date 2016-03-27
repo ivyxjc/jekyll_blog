@@ -54,7 +54,7 @@ request.add_header('User-Agent','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) G
 
 ## 使用代理
 
-## 代码
+
 
 1.参数是一个字典{'类型’：‘代理ip:端口号’}
 `proxy_support=urllib.request.ProxyHandler({})`
@@ -65,6 +65,18 @@ request.add_header('User-Agent','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) G
 3b.调用opener
 `opener.open(url)`
 
+### 代码
+
+```python
+proxy_support=urllib.request.ProxyHandler({'http':random.choice(iplist)})
+
+opener=urllib.request.build_opener(proxy_support)
+opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0')]
+urllib.request.install_opener(opener)
+
+req=urllib.request.Request(url)
+response=urllib.request.urlopen(req)
+```
 
 
 ## 爬知乎图片
