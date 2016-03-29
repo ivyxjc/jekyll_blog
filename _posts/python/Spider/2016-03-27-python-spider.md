@@ -49,8 +49,15 @@ request.add_header('User-Agent','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:43.0) G
 ```
 
 
+## 获取Response Headers
 
-
+下面代码是用来判断 网页是否使用`gzip`压缩过。
+```python
+for i in response.getheaders():
+    if i[0]=="Content-Encoding":
+        if(i[-1]=="gzip"):
+            html=gzip.decompress(html)
+```
 
 ## 使用代理
 
