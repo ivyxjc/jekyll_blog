@@ -205,4 +205,140 @@ for string in soup.stripped_strings:
     print(repr(string))
 ```
 
+### `.parent`和`.parents`
+通过`.parent`属性来获取某个元素的父节点
+通过元素的`.parents`属性可以递归得到元素的所有父辈节点。
 
+```python
+for parent in soup.a.parents:
+    if parent is None:
+        print(parent)
+    else:
+        print(parent.name)
+
+---p
+---html
+---[document]
+```
+
+### 兄弟节点
+
+#### `.next_sibling`和`.previous_sibling`
+
+使用`。next_sibling`和`.previous_sibling`属性来查询兄弟节点
+
+实际文档中的tag的 .next_sibling 和 .previous_sibling 属性通常是字符串或空白。因为中间可能会隔着一些字符以及标点。
+
+#### `.next_siblings`和`.previous_siblings`
+
+```python3
+for sibling in soup.a.next_siblings:
+    print(repr(sibling))
+
+---',\n'
+---<a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>
+---' and\n'
+---<a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>
+';\nand they lived at the bottom of a well.'
+```
+
+### 重现解析过程
+
+#### `.next_element`和`.previous_element`
+`next_element`属性指向解析过程中下一个被解析的对象(字符串或tag),结果可能与`.next_sibling`相同,但通常是不一样的.
+
+```python
+last_a_tag=soup.find("a",id="link3")
+print(last_a_tag)
+print(last_a_tag.next_sibling)
+print(last_a_tag.next_element)
+
+---<a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>
+---;
+---and they lived at the bottom of a well.
+---Tillie
+```
+
+#### `.next_elements`和`.previous_elements`
+
+## 搜索文档树
+
+### 过滤器
+
+#### 字符串
+
+#### 正则表达式
+
+```python
+for tag in soup.find_all(re.compile("^b")):
+    print(tag.name)
+```
+
+#### 列表
+如果传入列表参数,Beautiful Soup会将与列表中任一元素匹配的内容返回.
+
+#### True
+
+True可以匹配任何值,但是不会返回字符串节点
+
+#### 方法
+如果没有合适过滤器,那么还可以定义一个方法,方法只接受一个元素参数,如果这个方法返回True表示当前元素匹配并且被找到,如果不是则反回False。
+
+```python3
+def has_class_but_no_id(tag):
+    return tag.has_attr('class') and not tag.has_attr('id')
+```
+
+
+### find_all()
+
+#### name参数
+
+#### keyword参数
+
+`soup.find_all(id='link2')`
+
+
+#### 按CSS搜索
+
+因为`class`是python保留字，所以用`class_`
+例：
+`soup.find_all("a",class_="sister")`
+
+`class_`参数同样接受不同类型的过滤器 ,字符串,正则表达式,方法或 True :
+
+tag的`class`属性是 多值属性 .按照CSS类名搜索tag时,可以分别搜索tag中的每个CSS类名:
+
+#### text参数
+通过`text`参数可以搜搜文档中的字符串内容.
+
+#### limit参数
+
+`limit`参数限制返回结果的数量
+
+#### recursive参数
+调用tag的`find_all()`方法时,Beautiful Soup会检索当前tag的所有子孙节点,如果只想搜索tag的直接子节点,可以使用参数 `recursive=False`.
+
+#### 简写
+
+```
+soup.find_all("a")
+soup("a")
+```
+
+```
+soup.title.find_all(text=True)
+soup.title(text=True)
+```
+
+### find()
+
+只返回一个结果
+
+### `find_parents()`和`find_parent()`
+
+### `find_next_siblings()和`find_next_sibling()`
+
+### `find_all_next()`和`find_next()`
+
+### `find_all_previous()`和`find_previous()`
