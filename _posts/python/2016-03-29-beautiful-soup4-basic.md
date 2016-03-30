@@ -130,3 +130,79 @@ print(soup.name)
 
 ### Comment
 
+## 遍历文档树
+
+```
+html_doc = """
+<html><head><title>The Dormouse's story</title></head>
+
+<p class="title"><b>The Dormouse's story</b></p>
+
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
+<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
+<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+
+<p class="story">...</p>
+"""
+```
+
+### `.content`和`.children`
+tag的`.contents`属性可以将tag的子节点以列表的方式输出:
+通过tag的`.children`生成器,可以对tag的子节点进行循环:
+
+```python
+print(soup.title.contents)
+print(soup.title.contents[0])
+
+---["The Dormouse's story"]
+---The Dormouse's story
+```
+
+```python
+for i in soup.head.children:
+    print(i)
+
+---<title>The Dormouse's story</title>
+```
+
+### `.descendants`
+
+`.descendants`属性可以对所有tag的子孙节点进行递归循环
+
+```python
+print(soup.head.contents)
+for child in soup.head.descendants:
+    print(child)
+
+print(len(list(soup.children)))
+print(len(list(soup.descendants)))
+
+---[<title>The Dormouse's story</title>]
+---<title>The Dormouse's story</title>
+---The Dormouse's story
+---2
+---25
+```
+
+### `.string`
+
+如果tag只有一个`NavigableString`类型子节点,那么这个tag可以使用`.string`得到子节点
+
+```python
+print(soup.head.string)
+
+---The Dormouse's story
+```
+
+### `.strings`和`stripped_strings`
+如果tag中有多个字符串，可以使用`.strings`循环获取
+使用`.stripped_strings`可以去除多余空白内容：
+
+```python
+for string in soup.stripped_strings:
+    print(repr(string))
+```
+
+
