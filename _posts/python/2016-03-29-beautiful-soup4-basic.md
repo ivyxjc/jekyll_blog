@@ -342,3 +342,6 @@ soup.title(text=True)
 ### `find_all_next()`和`find_next()`
 
 ### `find_all_previous()`和`find_previous()`
+
+### CSS选择器
+在Tag或BeautifulSoup对象的`.select()`方法中传入字符串参数,即可使用CSS选择器的语法找到tag:

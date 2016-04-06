@@ -61,3 +61,65 @@ builder.setVibrate(vibrates);
 ### 效果
 
 ![](assets/img/posts/notification.gif)
+
+
+
+## 短信
+
+### 接收短信
+
+```java
+mReceiveFilter=new IntentFilter();
+mReceiveFilter.addAction("android.provider.Telephony.SMS_RECEIVED");
+mMessageReceiver=new MessageReceiver();
+registerReceiver(mMessageReceiver,mReceiveFilter);
+
+class MessageReceiver extends BroadcastReceiver{
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Bundle bundle=intent.getExtras();
+
+            Object[] pdus=(Object[])bundle.get("pdus");//提取短信消息
+
+            SmsMessage[] messages=new SmsMessage[pdus.length];
+
+            for(int i=0;i<messages.length;i++){
+                messages[i]=SmsMessage.createFromPdu((byte[])pdus[i]);
+            }
+
+            String address=messages[0].getOriginatingAddress();
+
+            String fullMessage="";
+            for(SmsMessage message:messages){
+                fullMessage+=message.getMessageBody();//获取短信内容
+            }
+            sender.setText(address);
+            content.setText(fullMessage);
+        }
+    }
+
+```
+        
+### 拦截短信
+系统发出的短信广播是一条有序广播，所以可以先获得该广播，再中止广播传递即可。
+
+1.提高MessageReceiver的优先级，让它能够先于系统短信程序接收到短信广播。
+2.调用`abortBroadcast()`方法，中止广播传递。
+
+### 发送短信
+
+```java
+mSendButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Log.i("AAABBB", "before");
+            SmsManager smsManager = SmsManager.getDefault();
+            Log.i("AAABBB", "getDefault");
+            smsManager.sendTextMessage(mTo.getText().toString(), null, mEditText.toString(), null, null);
+        }
+    });
+```
+
+
+
