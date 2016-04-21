@@ -75,10 +75,12 @@ private Handler mHandler=new Handler(new Handler.Callback() {
     }
 
 ......
-
-
 };
 ```
+
+## handler总结
+
+`handler`负责发送消息，`Looper`负责接收Handler发送的消息，并将消息发给`handler`自己。
 
 ### 使用Handler更新UI的原因
 
