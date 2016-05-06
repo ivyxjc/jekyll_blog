@@ -22,3 +22,5 @@ description:
 
 注意: 若一个服务既`startService()`又`bindService()`, 那么只要`stopService()`和`unbindService()`都被调用后,服务的`onDestroy()`方法才会执行.
 
+
+只能解绑定一次,不可以多次解绑定.
