@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 微博Oauth授权s
+title: 微博Oauth授权
 category: Web
 tags: [weibo]
 keywords:
