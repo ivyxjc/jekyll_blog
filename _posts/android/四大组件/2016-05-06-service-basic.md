@@ -24,3 +24,14 @@ description:
 
 
 只能解绑定一次,不可以多次解绑定.
+
+
+## 两种方式的区别
+
+Start方式特点:
+1.服务与启动源没有任何关系
+2.无法得到服务对象
+
+Bind方式特点:
+1.通过`IBinder`接口实例,返回一个`ServiceConnnection`对象给启动源.
+2.通过`ServiceConnection`对象的相关方法可以得到`Service`对象.
