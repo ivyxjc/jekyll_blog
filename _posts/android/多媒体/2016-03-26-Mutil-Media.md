@@ -60,7 +60,7 @@ builder.setVibrate(vibrates);
 
 ### 效果
 
-![](assets/img/posts/notification.gif)
+![](/assets/img/posts/notification.gif)
 
 
 
@@ -100,7 +100,7 @@ class MessageReceiver extends BroadcastReceiver{
     }
 
 ```
-        
+
 ### 拦截短信
 系统发出的短信广播是一条有序广播，所以可以先获得该广播，再中止广播传递即可。
 
@@ -120,6 +120,3 @@ mSendButton.setOnClickListener(new View.OnClickListener() {
         }
     });
 ```
-
-
-
