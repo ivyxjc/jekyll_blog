@@ -2,7 +2,7 @@
 layout: post
 title: 数据持久化
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,datapersistence]
 keywords:
 description:
 ---
@@ -97,10 +97,10 @@ create table Book{
 }
 ```
 
- 1.`integer`:整型
- 2.`real`：浮点型
- 3.`text`：文本类型
- 4.`blob`：二进制类型
+1. `integer`:整型
+2. `real`：浮点型
+3. `text`：文本类型
+4. `blob`：二进制类型
 
 ### 添加数据
 
@@ -170,7 +170,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             "price real," +
             "pages integer," +
             "name text)";
-            
+
     public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
         mContext=context;
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db=dbHelper.getWritableDatabase();
-                
+
                 //向数据库中添加数据
                 ContentValues values=new ContentValues();
                 values.put("author","Dan Brown");
