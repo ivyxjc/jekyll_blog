@@ -2,7 +2,7 @@
 layout: post
 title: 在Centos 6中升级python
 category: Web
-tags: []
+tags: [faq]
 keywords:
 description:
 ---
@@ -18,7 +18,7 @@ Centos默认的python使用的是`python2.6`,我常用的是`python3.5`,所以�
  3. `./configure --prefix=/usr/local/python3.5`
  4. `make`
  5. `make install`
-3. 备份原油python命令执行文件
+3. 备份原有python命令执行文件
 `mv /usr/bin/python /usr/bin/pythonbak`
 4. 创建新的python软连接
    `ln -s /usr/local/python3.5/bin/python3.5 /usr/bin/python`
