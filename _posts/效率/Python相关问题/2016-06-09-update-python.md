@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Centos 6中升级python
-category: Web
+category: 效率
 tags: [faq]
 keywords:
 description:
