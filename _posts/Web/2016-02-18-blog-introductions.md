@@ -16,6 +16,7 @@ description:
 
 ## 博客的结构
 
+
 **Categories**主要有```java```，```android```，```web```,随笔等几类，在博客左边栏中可以查看到。<br>
 分类中不会看到*GitBook*中的内容，详见下方说明。<br>
 
@@ -44,12 +45,12 @@ github的语法似乎比GitBook的要求更为严格<br>
 ## 域名 dns https
 由于使用了CloudFlare的SSL服务，所以使用了他们的域名解析器，将nameserver改为
 
-    FRED.NS.CLOUDFLARE.COM 
+    FRED.NS.CLOUDFLARE.COM
     SANDY.NS.CLOUDFLARE.COM
 
 A记录指向Githu的服务器
 
     192.30.252.153
     192.30.252.154
-    
+
 再在CloudFlare的PageRule中设置为总使用```https:```

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 虚拟机环境搭建和相关问题解决
-category: Linux
-tags: [python,spider,bs4]
+category: 效率
+tags: [faq,python,spider,bs4]
 keywords:
 description:
 ---
