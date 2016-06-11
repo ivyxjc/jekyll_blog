@@ -1,6 +1,6 @@
 ---
 layout: post
-title: flask表单
+title: 表单(flask)
 category: Web
 tags: [pythonweb,python,flask,flaskform]
 keywords:
