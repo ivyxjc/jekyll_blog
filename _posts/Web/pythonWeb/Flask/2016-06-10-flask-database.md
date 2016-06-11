@@ -35,3 +35,26 @@ class User(db.Model):
 
 
 ## 关系
+
+```python
+class Role(db.Model):
+    __tablename__="roles"
+# ...
+    users = db.relationship('User', backref='role')
+class User(db.Model):
+    __tablename__="users"
+# ...
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+```
+
+使用`users`表中的外键连接了两行. `role_id`被定义为外键.与`roles.id`建立联系.
+
+`Role`模型中的`users`属性代表这个关系的面向对象视角.对于一个`Role`类的实现, `users`属性将返回与角色相关联的用户组成的列表. `db.relationship()`第一参数表明这个关系的另一端是哪个模型. `backref`参数项`User`模型中添加以个`role`属性, 从而定义反向关系.这一属性可代替`role_id`访问`Role`模型,获取的是模型对象而不是外键的值.
+
+## 数据库操作
+
+![](/assets/img/posts/flask_filter.png)
+
+## 数据库迁移
+
+需要安装`Flask-Migrate`

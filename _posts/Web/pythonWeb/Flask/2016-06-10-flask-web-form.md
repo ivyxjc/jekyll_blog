@@ -34,3 +34,15 @@ def index():
     return render_template('index.html',current_time=datetime.utcnow(),form=form,name=name)
 ```
 提交数据后如果能被所有的验证函数接受,则`validate_on_submit()`返回True,否则返回False.
+
+
+## 验证函数
+
+### 常规验证方法
+
+sername = StringField('Username', validators=[
+Required(), Length(1, 64),Regexp('^[A-Za-z][A-Za-z0-9_.]\*\$', 0,'Usernames must have only letters, ''numbers, dots or underscores')])
+
+### 自定义验证函数
+
+在表单类中定义了以`validate_`开头且后面跟着字段名的方法,这个方法会和常规的验证函数一起调用.
