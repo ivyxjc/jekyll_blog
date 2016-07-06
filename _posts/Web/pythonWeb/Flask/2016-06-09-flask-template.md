@@ -7,9 +7,7 @@ keywords:
 description:
 ---
 
-
 ## Flask-Moment
-
 初始化Flask-Moment
 
 ```python
