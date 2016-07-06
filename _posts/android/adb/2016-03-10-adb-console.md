@@ -2,7 +2,7 @@
 layout: post
 title: adb常用命令
 category: Android
-tags: [android,adb]
+tags: [android,android_adb]
 keywords:
 description:
 ---
@@ -14,4 +14,3 @@ description:
 
 ## 录制屏幕相关
 **adb screerecord /sdcard/test.mp4**：录制手机实况视频到test.mp4，按**ctrl+c**结束，否则录制320s。
-

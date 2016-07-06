@@ -2,7 +2,7 @@
 layout: post
 title: 跨程序共享数据
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_data]
 keywords:
 description:
 ---

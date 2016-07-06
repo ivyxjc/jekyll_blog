@@ -2,7 +2,7 @@
 layout: post
 title: Activity的生命周期
 category: Android
-tags: [android,androidlifecycle]
+tags: [android,android_lifecycle]
 keywords:
 description:
 ---

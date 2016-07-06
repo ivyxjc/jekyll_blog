@@ -2,7 +2,7 @@
 layout: post
 title: 广播机制初步
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_broadcast]
 keywords:
 description:
 ---
@@ -127,13 +127,13 @@ public class BootCompleteReceiver extends BroadcastReceiver{
 <application
 	...>
 	.....
-    
+
     <receiver android:name=".BootCompleteReceiver">
         <intent-filter>
             <action android:name="android.intent.action.BOOT_COMPLETED"/>
         </intent-filter>
     </receiver>
-    
+
 </application>
 ```
 

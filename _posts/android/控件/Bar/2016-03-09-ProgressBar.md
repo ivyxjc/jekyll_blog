@@ -2,7 +2,7 @@
 layout: post
 title: ProgressBar和ProgressDialog
 category: Android
-tags: [android,androidprogressbar]
+tags: [android,android_bar]
 keywords:
 description:
 ---
@@ -127,5 +127,3 @@ case R.id.showDialog:{
 ## 自定义ProgressBar的样式
 
 ProgressBar的样式是可以自定义的，可参考默认的样式更改。
-
-

@@ -2,7 +2,7 @@
 layout: post
 title: Handler与多线程
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_thread]
 keywords:
 description:
 ---

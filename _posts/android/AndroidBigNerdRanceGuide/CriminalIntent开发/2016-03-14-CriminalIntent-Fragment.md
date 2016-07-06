@@ -2,7 +2,7 @@
 layout: post
 title: Criminal程序中Fragment相关内容
 category: Android
-tags: [android,androidfragment,fragment,listfragment,adapter,listview,arrayadapter]
+tags: [android,android_UI]
 keywords:
 description:
 ---
