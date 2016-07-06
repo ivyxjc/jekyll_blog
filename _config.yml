@@ -53,4 +53,6 @@ locals:
   newest: 最新文章
   archive: 归档
 
-gems: [jekyll-paginate]
+gems: 
+  -[jekyll-paginate]
+  - jekyll-tagslist

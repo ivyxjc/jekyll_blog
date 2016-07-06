@@ -41,7 +41,7 @@
           <div class="tab-pane" id="tags">
             <div class="panel-group" id="accordion">
               <!--<h2 class="center">{{ site.locals.tags }}</h2>-->
-              {% assign sortedtags = site.tags | split:' ' | sort %}
+              {% assign sortedtags = site.tags | sort %}
               {% for tag in sortedtags %}
                 <div class="panel panel-info">
                   <div class="panel-heading">
