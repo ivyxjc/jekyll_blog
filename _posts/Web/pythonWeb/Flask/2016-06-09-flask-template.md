@@ -8,8 +8,7 @@ description:
 ---
 
 ## Flask-Moment
-初始化Flask-Moment
-
+初始化
 ```python
 moment=Moment(app)
 ```
