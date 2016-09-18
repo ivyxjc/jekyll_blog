@@ -58,3 +58,20 @@ class User(db.Model):
 ## 数据库迁移
 
 需要安装`Flask-Migrate`
+
+
+## 效率
+
+
+### 如何连接mysql数据库
+
+由于`python-mysql`目前并不支持python3.5，所以使用`pymysql`库。
+
+```python
+mysql_uri='mysql+pymysql://username:password@localhost/database'
+
+app.config['SQLALCHEMY_DATABASE_URI']=mysql_uri
+db=SQLAlchemy(app)
+```
+
+### 如何进行模糊查询
