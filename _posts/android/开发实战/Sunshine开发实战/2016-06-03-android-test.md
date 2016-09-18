@@ -2,7 +2,7 @@
 layout: post
 title: Sunshine开发实战:测试
 category: Android
-tags: [android,test,androidtest]
+tags: [android,android_test]
 keywords:
 description:
 ---

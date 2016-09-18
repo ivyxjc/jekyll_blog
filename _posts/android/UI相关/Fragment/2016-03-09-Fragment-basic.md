@@ -2,13 +2,13 @@
 layout: post
 title: Fragment初步
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_fragment,android_UI]
 keywords:
 description:
 ---
 
 ## Fragment概要
-![](assets/img/posts/fragmentIntro.png)
+![](/assets/img/posts/fragmentIntro.png)
 
 ## **onCreateView()**方法
 
@@ -42,7 +42,7 @@ android:tag 提供一个唯一的字符串tag
 
 ### fragment_1和fragment_2.xml和activity_main.xml
 
-```xml 
+```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
@@ -146,7 +146,7 @@ case R.id.first:{
 
 ### 效果
 
-![](assets/img/posts/fragment_basic_1.png)
+![](/assets/img/posts/fragment_basic_1.png)
 
 
 ## 动态加载
@@ -356,4 +356,4 @@ Activity ---> Fragment:在Activity中创建Bundle数据包，并调用Fragment�
 Fragment ---> Activity：需要在Fragment中定义一个内部回调接口，让包含该Fragment的Activity实现该回调接口。这样Fragment可调用回调方法将数据传递给Activity。
 
 ## 相关博客网址
-[](http://blog.csdn.net/guolin_blog/article/details/8881711)
+[Android Fragment完全解析，关于碎片你所需知道的一切](http://blog.csdn.net/guolin_blog/article/details/8881711)

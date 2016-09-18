@@ -2,7 +2,7 @@
 layout: post
 title: Layout_Gravity和Gravity
 category: Android
-tags: [android,android layout]
+tags: [android,android_layout]
 keywords:
 description:
 ---

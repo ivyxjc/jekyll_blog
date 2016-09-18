@@ -2,7 +2,7 @@
 layout: post
 title: Fragment和Activity通信
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_UI,android_fragment]
 keywords:
 description:
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: AlertDialog
 category: Android
-tags: [android,alertdialog]
+tags: [android,android_control]
 keywords:
 description:
 ---
@@ -52,9 +52,3 @@ public class AlertDialogActivity extends Activity {
     }
 }
 ```
-
-
-
-
-
-

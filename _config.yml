@@ -5,13 +5,13 @@ markdown: kramdown
 # markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "quote", "highlight", "tables", "footnotes", "hard_wrap"]
-highlighter: pygments
+  rouge: pygments
 # markdown: kramdown
 # kramdown:
-#   input: GFM    
+#   input: GFM
 
 # 作者信息
-author: 
+author:
   name: ivyxjc
   email: ivyxjc1994@hotmail.com
   link: ivyxjc.xyz
@@ -35,13 +35,13 @@ ga:
 
 # disqus 设置
 disqus:
-  shortname: 
+  shortname:
 
 # 主题设置，自动激活某个标签
 active:
 
 # 首页除了最新文章外显示分类
-cates:  
+cates:
   - OJ
   - Web
   - Android
@@ -53,4 +53,6 @@ locals:
   newest: 最新文章
   archive: 归档
 
-gems: [jekyll-paginate]
+gems: 
+  -[jekyll-paginate]
+  - jekyll-tagslist

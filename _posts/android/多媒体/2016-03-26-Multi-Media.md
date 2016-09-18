@@ -2,7 +2,7 @@
 layout: post
 title: Notification初步
 category: Android
-tags: [android,androidfragment,fragment]
+tags: [android,android_notification]
 keywords:
 description:
 ---

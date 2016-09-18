@@ -2,7 +2,7 @@
 layout: post
 title: 数据持久化
 category: Android
-tags: [android,datapersistence]
+tags: [android,data_persistence]
 keywords:
 description:
 ---
