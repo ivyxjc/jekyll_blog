@@ -194,3 +194,35 @@ private class FetchItemTask extends AsyncTask<Void, Void, ArrayList<MainItem>> {
 
 }
 ```
+
+## 注意点
+
+点击图片进入电影详细页面时, 如果在详细页面图片未加载时返回, 应用会crash.<br>
+应该是此时ImageView已经被销毁了, 所以就造成NullPointerException.
+
+官方说已经解决这个问题, 但是下面这写法还是会crash.
+
+```java
+Glide.with(getActivity())
+     .load(url)
+     .diskCacheStrategy(DiskCacheStrategy.ALL)
+     .centerCrop()
+     .into(imageMovie);
+```
+
+更改为
+
+```java
+onCreate(...){
+mRequestManager=Glide.with(getActivity());
+}
+
+...
+mRequestManager
+           .load(url)
+           .diskCacheStrategy(DiskCacheStrategy.ALL)
+           .centerCrop()
+           .into(imageMovie);
+```
+
+这样就不会出问题.
