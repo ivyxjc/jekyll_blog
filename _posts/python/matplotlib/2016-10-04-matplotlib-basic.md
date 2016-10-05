@@ -57,7 +57,3 @@ ax.legend((type1, type2, type3), (u'不喜欢', u'魅力一般', u'极具魅力'
 
 plt.show()
 ```
-
-
-
-## 中文显示问题
