@@ -2,7 +2,7 @@
 layout: post
 title: RecyclerView
 category: Android
-tags: [android,UI]
+tags: [android,UI,RecyclerView]
 keywords:
 description:
 --
@@ -16,7 +16,6 @@ mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
 
 ```
-
 ## RecyclerView 添加适配器 以及设置item点击监听
 
 ```java

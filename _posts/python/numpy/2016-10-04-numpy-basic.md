@@ -58,7 +58,6 @@ For example, for an shape of(1,2,2,3), a reps of (2,3) will be treated as (1,1,2
    [1 2 3 1 2 3 1 2 3]]]]
 ```
 
-
 ## numpy.sum()
 [numpy.sum()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html)
 
@@ -69,10 +68,6 @@ This is a litte complex. `abs(axis)` must be less than `a.ndim`.
 
 ![](/assets/img/posts/numpy_sum_1.jpg)
 ![](/assets/img/posts/numpy_sum_2,jpg)
-
-
-
-
 
 ### dtype
 

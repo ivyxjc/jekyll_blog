@@ -12,4 +12,5 @@ android_async
 android_data
 android-bar
 android_project
+android_RecyclerView
 volley
