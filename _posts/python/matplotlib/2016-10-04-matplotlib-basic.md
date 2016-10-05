@@ -37,7 +37,26 @@ plt.scatter(datingDataMat[:,1],datingDataMat[:,2],s=sizeLab, c=colors)
 plt.show()
 ```
 
+## 3d散点图
 
+```python
+fig=plt.figure()
+ax=fig.add_subplot(111,projection='3d')
+
+#设置坐标
+ax.set_xlabel("飞行里程数")
+ax.set_ylabel("游戏时间百分比")
+ax.set_zlabel("冰激凌消耗量")
+
+type1=ax.scatter(dataDidnlike[:,0], dataDidnlike[:,1], dataDidnlike[:,2], c='#3c345b')
+type2=ax.scatter(dataSmallDoses[:,0], dataSmallDoses[:,1],dataSmallDoses[:,2],c="#4576f7")
+type3=ax.scatter(dataLargeDoses[:,0], dataLargeDoses[:,1], dataLargeDoses[:,2],c="#43ff1a")
+
+#设置图例
+ax.legend((type1, type2, type3), (u'不喜欢', u'魅力一般', u'极具魅力'), loc=2)
+
+plt.show()
+```
 
 
 
