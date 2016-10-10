@@ -14,14 +14,14 @@ redcarpet:
 author:
   name: ivyxjc
   email: ivyxjc1994@hotmail.com
-  link: ivyxjc.xyz
+  link: ivyxjc.github.io
   github: https://github.com/ivyxjc
 
 # 站点信息
 title: Ivyxjc
 description: My personal blog
-url: https://ivyxjc.xyz
-enforce_ssl: ivyxjc.xyz
+url: ivyxjc.github.io
+enforce_ssl:
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -31,7 +31,7 @@ favicon: /assets/img/identicon.png
 # google analytics 设置
 ga:
   id: UA-73862242-2
-  url: ivyxjc.xyz
+  url: ivyxjc.github.io
 
 # disqus 设置
 disqus:
@@ -53,6 +53,6 @@ locals:
   newest: 最新文章
   archive: 归档
 
-gems: 
+gems:
   -[jekyll-paginate]
   - jekyll-tagslist

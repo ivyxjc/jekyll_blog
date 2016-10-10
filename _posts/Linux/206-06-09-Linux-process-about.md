@@ -2,7 +2,7 @@
 layout: post
 title: Linux系统和进程相关的问题和解决方法
 category: Linux
-tags: [python,spider,bs4]
+tags: [linux]
 keywords:
 description:
 ---
